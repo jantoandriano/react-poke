@@ -1,13 +1,5 @@
 # Pokemon App with Create-React-App
 
-Take a journey to the pokemon's world and catch em' all! Available with dark mode, and fully supported on mobile & desktop!
-
-Created with CRA & typescript with https://graphql-pokeapi.vercel.app/ as the API. It also uses https://emotion.sh/docs/introduction as the library to write css in javascript.
-
-Website link: https://pokemon-react-murex.vercel.app/
-
-## Screenshots
-
 ### Home Page
 
 | Light Mode   |      Dark Mode      |
@@ -25,10 +17,3 @@ Website link: https://pokemon-react-murex.vercel.app/
 | Pokemon Caught|      Pokemon Run    |
 |---------------|:-------------------:|
 | <img width="361" alt="Screen Shot 2021-01-30 at 1 26 08 PM" src="https://user-images.githubusercontent.com/42708035/106349211-c5856100-62fe-11eb-83f9-8398436ce5a7.png">    |  <img width="361" alt="Screen Shot 2021-01-30 at 1 28 41 PM" src="https://user-images.githubusercontent.com/42708035/106349242-16955500-62ff-11eb-800b-68f3187846f0.png">      |
-
-
-## Performance score
-
-### Lighthouse
-
-<img width="569" alt="Screen Shot 2021-01-30 at 1 06 42 PM" src="https://user-images.githubusercontent.com/42708035/106348853-09c33200-62fc-11eb-97a5-2a1abb02fb8b.png">
