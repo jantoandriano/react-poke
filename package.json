@@ -1,0 +1,62 @@
+{
+  "name": "pokemon",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
+    "format:generated": "prettier --write \"src/generated/**/*.{ts,tsx}\"",
+    "build": "yarn apollo:generate && react-scripts build",
+    "test": "yarn apollo:generate && react-scripts test",
+    "apollo:generate": "yarn create-generated-folder && yarn clean-generated-folder && yarn apollo:typegen-server && yarn format:generated",
+    "apollo:typegen-server": "apollo client:codegen src/generated/server --target typescript --endpoint=https://graphql-pokeapi.vercel.app/api/graphql --tagName gql --outputFlat",
+    "create-generated-folder": "cd src/generated || mkdir src/generated ",
+    "clean-generated-folder": "if find src/generated/*; then  rm -r src/generated/*; fi",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.7",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "graphql": "^15.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-indexed-db": "^1.0.12",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-switch": "^6.0.0",
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "apollo": "^2.32.1",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.2.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
